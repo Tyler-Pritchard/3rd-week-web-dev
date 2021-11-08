@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Word-Counter</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="parentContainer">
+      <h1>WORD COUNTER</h1>
+      <textarea
+        placeholder="Enter Your Text Here...."
+        id="text-input"
+      ></textarea>
+      <div id="info-container">
+        <div class="info-item">Characters: <span id="characters">0</span></div>
+        <div class="info-item">Words: <span id="words">0</span></div>
+        <div class="info-item">Sentences: <span id="sentences">0</span></div>
+        <div class="info-item">Paragraphs: <span id="paragraphs">0</span></div>
+        <div class="info-item">
+          Reading-time: <span id="reading-time">0</span>
+        </div>
+      </div>
+      <div id="button-container">
+        <a href="#" class="btn" id="resultsButton"><span>View Results!</span></a>
+      </div>
+    </div>
+
+    <script defer>
+window.addEventListener("DOMContentLoaded", function(event){
+'use strict';
+// I am purposefully leaving this empty space for us to work in together
+
+
+let resultsButton = document.getElementById("resultsButton");
+let infoContainer = document.getElementById("info-container");
+let booleanToggle = false;
+
+resultsButton.addEventListener("click", function(event){
+
+  if (booleanToggle == false){
+
+    infoContainer.style.display = "flex";
+    booleanToggle = true;
+
+  }else if(booleanToggle == true){
+
+    infoContainer.style.display = "none";
+    booleanToggle = false;
+
+  }else{
+
+    console.log("an error has occurred")
+
+  }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************
+ * Word Counter Will Go Here *
+ *****************************/
+
+</script>
+
+<style>
+      
+
+  body {
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: 'Roboto Slab', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    /* https://freefrontend.com/css-background-patterns/ */
+    background-image: radial-gradient(
+        circle,
+        rgba(48, 67, 39, 1) 20%,
+        rgba(48, 67, 39, 0) 21%
+      ),
+      radial-gradient(
+        circle,
+        rgba(207, 122, 55, 1) 20%,
+        rgba(207, 122, 55, 0) 21%
+      ),
+      linear-gradient(
+        -45deg,
+        rgb(236, 246, 237, 1) 20%,
+        rgb(236, 246, 237, 0) 21%
+      ),
+      linear-gradient(
+        -45deg,
+        rgb(236, 246, 237, 0) 79%,
+        rgb(236, 246, 237, 1) 80%
+      ),
+      linear-gradient(45deg, rgba(90, 181, 211, 0) 80%, rgba(90, 181, 211, 1) 81%),
+      linear-gradient(45deg, rgba(90, 181, 211, 1) 20%, rgba(90, 181, 211, 0) 21%),
+      linear-gradient(-45deg, rgba(207, 122, 55, 1) 25%, transparent 26%),
+      linear-gradient(
+        -45deg,
+        rgba(207, 122, 55, 0) 74%,
+        rgba(207, 122, 55, 1) 75%
+      ),
+      linear-gradient(
+        45deg,
+        rgba(237, 201, 112, 0) 74%,
+        rgba(237, 201, 112, 1) 75%
+      ),
+      linear-gradient(
+        45deg,
+        rgba(237, 201, 112, 1) 25%,
+        rgba(237, 201, 112, 0) 26%
+      ),
+      linear-gradient(
+        rgb(236, 246, 237, 0) 38%,
+        rgb(236, 246, 237, 1) 39% 60%,
+        rgb(236, 246, 237, 0) 61%
+      ),
+      linear-gradient(
+        to right,
+        rgba(237, 201, 112, 0) 35%,
+        rgba(237, 201, 112, 1) 36% 40%,
+        rgb(236, 246, 237, 1) 36% 60%,
+        rgba(237, 201, 112, 1) 61% 65%,
+        rgba(237, 201, 112, 0) 66%
+      ),
+      linear-gradient(
+        rgba(237, 201, 112, 0) 34%,
+        rgba(237, 201, 112, 1) 35% 39%,
+        rgb(236, 246, 237, 1) 40% 60%,
+        rgba(237, 201, 112, 1) 61% 65%,
+        rgba(237, 201, 112, 0) 66%
+      ),
+      linear-gradient(
+        to right,
+        rgba(48, 67, 39, 0) 35%,
+        rgba(48, 67, 39, 1) 36% 65%,
+        rgba(48, 67, 39, 0) 66%
+      ),
+      linear-gradient(
+        to right,
+        rgba(48, 67, 39, 0) 35%,
+        rgba(48, 67, 39, 1) 36% 40%,
+        rgb(236, 246, 237, 1) 36% 60%,
+        rgba(48, 67, 39, 1) 61% 65%,
+        rgba(48, 67, 39, 0) 66%
+      ),
+      linear-gradient(
+        rgba(48, 67, 39, 0) 34%,
+        rgba(48, 67, 39, 1) 35% 65%,
+        rgba(48, 67, 39, 0) 66%
+      ),
+      linear-gradient(
+        rgba(48, 67, 39, 0) 60%,
+        rgba(48, 67, 39, 1) 61% 65%,
+        rgba(48, 67, 39, 0) 66%
+      ),
+      linear-gradient(
+        to right,
+        rgba(90, 181, 211, 0) 0%,
+        rgba(90, 181, 211, 1) 31% 69%,
+        rgba(90, 181, 211, 0) 70%
+      );
+    background-position: 30px 85px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0,
+      0 0, 0 0, 0 0, -3.5px 0, 3.5px 0, 0 -3.5px, 0 3.5px, 0 0;
+    background-size: 62px 170px, 62px 170px, 62px 170px, 62px 170px, 62px 170px,
+      62px 170px, 62px 170px, 62px 170px, 62px 170px, 62px 170px, 62px 170px,
+      62px 170px, 62px 170px, 62px 170px, 62px 170px, 62px 170px, 62px 170px,
+      1px 170px;
+  }
+  
+  h1{
+    font-weight: 900;
+    font-size: 2.5rem;
+    margin-top: 0;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .info-item{
+    background-color: silver;
+    box-shadow: rgb(87, 86, 86) .2em .15em .15em .15em;
+    border: .2em silver outset;
+    margin: .25em;
+    padding: .3em;
+  }
+  
+  #parentContainer{
+    margin: 1em auto 1em;
+    width: 50%;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    padding: 1em;
+    box-shadow: .5em 1em 1em 1em rgba(0, 0, 0, .5);
+    background: linear-gradient(90deg, #d1d0ff 0%,#f9ffce 30%,#d2f8ff 67%, #dbffd9 100%);
+    background-size: 1000%;
+    -webkit-animation: background 20s linear alternate infinite;
+            animation: background 20s linear alternate infinite;
+  }
+  @-webkit-keyframes background {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  
+  @keyframes background {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 0;
+    }
+  }
+  
+  #info-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;  
+    font-weight: 600;
+    margin: 0 .1em;
+    /* box-shadow:rgb(87, 86, 86) */
+    }
+  
+  #text-input{
+    padding: .5em;
+    width: 95%;
+    font-size: 1rem;
+    line-height: 2.4;
+  }
+  
+  #button-container {
+    position: relative;
+    top: 2.25em;
+    left: 54em;
+    transform: translate(-50%, -50%);
+  }
+  
+  .btn {
+    display: block;
+    height: 50px;
+    width: 186px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-align: center;
+    border: outset palegoldenrod .333em;
+    color: palegoldenrod;
+  
+  }
+  .btn:after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background: #3bade3;
+    background: linear-gradient(45deg, #3bade3 0%, #576fe6 30%, #9844b7 51%, violet 80%,#ff357f 100%);
+    height: 50px;
+    width: 25em;
+    z-index: -1;
+    transform: translateX(-12em);
+    transition: transform 400ms ease-in;
+  }
+  .btn:hover:after {
+    transform: translateX(-22em);
+  }
+  .btn span {
+    position: relative;
+    top: 16px;
+  }
+
+      </style>
+  </body>
+</html>
