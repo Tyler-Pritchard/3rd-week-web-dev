@@ -16,11 +16,9 @@
 
 ### Weekend Review 
 
-- [Video of Final Output]
-(https://drive.google.com/file/d/1MprsKsvwg6moGq72mV2AwmsKMzcf4OBK/view?usp=sharing)
+- [Video of Final Output](https://drive.google.com/file/d/1MprsKsvwg6moGq72mV2AwmsKMzcf4OBK/view?usp=sharing)
 
-- [JS Review With No Guidance!]
-(https://github.com/Vets-In-Tech/week3-Homework)
+- [JS Review With No Guidance!](https://github.com/Vets-In-Tech/week3-Homework)
 
 - [JS Review WITH Guidance!](https://github.com/Vets-In-Tech/week3-Homework-Scaffold)
 
