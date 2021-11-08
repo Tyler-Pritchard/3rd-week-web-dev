@@ -1,15 +1,15 @@
 # VetsInTech Week 3 - Day 3
 
 ### Learning Objectives
-CSS specificity
-Position
-Z-index
-Visibility
-Hover
-Focus
-Create Modal 
-addEventListener class
-Triggering a modal
+- CSS specificity
+- Position
+- Z-index
+- Visibility
+- Hover
+- Focus
+- Create Modal 
+- addEventListener class
+- Triggering a modal
 
 ### What are we doing?
 Covering some more important CSS properties and implementing exercise that shows
